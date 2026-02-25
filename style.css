@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Playfair Display', serif;
+  background: radial-gradient(circle at top, #1b1f3b, #050510);
+  color: #f1dfba;
+  overflow-x: hidden;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)), url('newbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 5rem;
+  letter-spacing: 4px;
+}
+
+.glow {
+  text-shadow: 
+    0 0 10px #cfae70,
+    0 0 30px #a67c3c,
+    0 0 60px #ffd27d;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-top: 10px;
+  opacity: 0.99;
+}
+
+/* Magic Button */
+.btn-magic {
+  margin-top: 30px;
+  padding: 14px 32px;
+  border: 1px solid #cfae70;
+  color: #e8d8b7;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+
+.btn-magic:hover {
+  background: #cfae70;
+  color: #1b1f3b;
+  box-shadow: 0 0 20px #ffd27d;
+}
+
+/* Sections */
+.about-content {
+  padding: 90px 10% 180px 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  text-align: left;
+}
+
+#about {
+  margin-top: 80px;
+}
+
+.about-image {
+  margin: 0;
+  padding: 0;
+}
+
+.about-text {
+  margin: 0;
+  padding: 0;
+}
+
+.bingkai-image {
+  width: 400px;
+  height: 500px;
+  margin-top: -100px;
+}
+
+.section p {
+  text-align: justify;
+  margin-bottom: -100px;
+  text-size-adjust: 17pt;
+}
+
+.section h2 {
+   font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: -2%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+
+
+.about-text p {
+  text-align: justify;
+  max-width: 500px;
+  margin-top: 12px;
+  line-height: 1.8;
+  white-space: normal;
+  word-break: normal;
+}
+
+.section h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-top: -5%;
+}
+
+.section h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.section h5 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.dark {
+  background: rgba(0,0,0,0.35);
+}
+
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.card {
+  background: linear-gradient(145deg, #2a2f5a, #12152e);
+  border: 1px solid #cfae70;
+  padding: 20px 30px;
+  border-radius: 15px;
+  min-width: 220px;
+  box-shadow: 0 0 15px rgba(207,174,112,0.3);
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  width: 100%;
+  padding: 0 10%;
+}
+
+.gallery .art {
+  display: block;
+  background: rgba(0,0,0,0.12);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery .art:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.gallery .art img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.art-label {
+  display: block;
+  padding: 12px;
+  font-size: 0.95rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.08));
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Glowing Orbs */
+.orb {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ffd27d, #cfae70, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffd27d, 0 0 30px #cfae70;
+  animation: pop 5s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes pop {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* About paragraph: justified but constrained */
+.about-text p {
+  text-align: center;
+  max-width: 500px;
+  margin-top: 12px;
+}
+
+/* Contact styling: centered without forced left margin */
+.Contact-info {
+  padding: 60px 10% 120px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Contact-info p {
+  color: #f1dfba;
+  margin: 1px 0;
+}
